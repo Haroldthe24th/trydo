@@ -1,0 +1,6 @@
+recreation of a template 
+http://rainbowit.net/html/trydo/15-main-demo-dark.html
+for practice
+
+sass compile
+sass  style.scss index.css
