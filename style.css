@@ -152,6 +152,8 @@ table {
 .container {
   max-width: 78rem;
   margin: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 header {
@@ -281,6 +283,7 @@ header {
 .about-section {
   min-height: 45rem;
   background: #191919;
+  color: #c6c9d8;
 }
 
 .about-container {
@@ -291,6 +294,8 @@ header {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  padding-top: 7rem;
+  padding-bottom: 7rem;
 }
 
 .about-content {
@@ -301,6 +306,10 @@ header {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  margin-left: 4rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .about-bottom-content {
@@ -315,6 +324,34 @@ header {
 
 .about-thumbnail img {
   border-radius: 8px;
+}
+
+.main-about h1 {
+  font-size: 3.7rem;
+  font-weight: 900;
+  color: #fff;
+}
+
+.main-about p {
+  font-size: 1.1rem;
+  line-height: 1.8rem;
+  opacity: 0.8;
+  margin-top: 1.7rem;
+  margin-bottom: 2.7rem;
+}
+
+.small-about h1 {
+  font-size: 1.7rem;
+  font-weight: 900;
+  color: #fff;
+}
+
+.small-about p {
+  font-size: 1.1rem;
+  line-height: 1.8rem;
+  opacity: 0.8;
+  margin-top: 1.7rem;
+  margin-right: 1rem;
 }
 
 /**************/

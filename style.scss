@@ -157,12 +157,19 @@ $coldPink: #ee076e;
   display: flex;
   flex-direction: column;
 }
+@mixin para() {
+  font-size: 1.1rem;
+  line-height: 1.8rem;
+  opacity: 0.8;
+}
 
 /*****/
 
 .container {
   max-width: 78rem;
   margin: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 header {
   padding: 3.5rem 3rem;
@@ -239,9 +246,7 @@ header {
       margin-bottom: 1.8rem;
     }
     p {
-      font-size: 1.1rem;
-      line-height: 1.8rem;
-      opacity: 0.8;
+      @include para();
     }
   }
 }
@@ -251,12 +256,17 @@ header {
 .about-section {
   min-height: 45rem;
   background: $bg2;
+  color: $txtGrey;
 }
 .about-container {
   @include flex-row();
+  padding-top: 7rem;
+  padding-bottom: 7rem;
 }
 .about-content {
   @include flex-col();
+  margin-left: 4rem;
+  justify-content: center;
 }
 .about-bottom-content {
   @include flex-row();
@@ -268,7 +278,27 @@ header {
 }
 
 .main-about {
+  h1 {
+    font-size: 3.7rem;
+    font-weight: 900;
+    color: #fff;
+  }
+  p {
+    @include para();
+    margin-top: 1.7rem;
+    margin-bottom: 2.7rem;
+  }
 }
 .small-about {
+  h1 {
+    font-size: 1.7rem;
+    font-weight: 900;
+    color: #fff;
+  }
+  p {
+    @include para();
+    margin-top: 1.7rem;
+    margin-right: 1rem;
+  }
 }
 /**************/
