@@ -355,4 +355,96 @@ header {
 }
 
 /**************/
+.services-section {
+  min-height: 45rem;
+  background: #101010;
+  color: #c6c9d8;
+}
+
+.left-service-cont {
+  width: 28rem;
+  padding-top: 2rem;
+  padding-right: 4rem;
+}
+
+.right-service-cont {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 25rem 25rem;
+      grid-template-columns: 25rem 25rem;
+  -ms-grid-rows: 17rem 17rem;
+      grid-template-rows: 17rem 17rem;
+  grid-gap: 1rem;
+}
+
+.service-element-srv {
+  color: #c6c9d8;
+  padding: 2rem;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+  -webkit-transition-delay: 0.5s;
+          transition-delay: 0.5s;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.service-element-srv .content h3 {
+  color: #fff;
+  font-size: 1.6rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.service-element-srv .content p {
+  font-size: 1.1rem;
+  line-height: 1.8rem;
+  opacity: 0.8;
+}
+
+.service-element-srv:hover {
+  -webkit-transform: translateY(-4px);
+          transform: translateY(-4px);
+  background: -webkit-gradient(linear, left top, right top, from(#f81f01), to(#f9004d));
+  background: linear-gradient(to right, #f81f01, #f9004d);
+}
+
+.service-element-srv:hover .svg-srv > line,
+.service-element-srv:hover path,
+.service-element-srv:hover circle,
+.service-element-srv:hover rect,
+.service-element-srv:hover polygon,
+.service-element-srv:hover polyline {
+  stroke: #fff;
+}
+
+.svg-srv {
+  width: 50px;
+  height: 50px;
+  stroke-width: 1px;
+}
+
+.service-btn a {
+  font-weight: 1.5rem;
+  color: red;
+}
+
+.service-btn a span {
+  position: relative;
+}
+
+.service-btn a span::after {
+  content: "";
+  left: 0;
+  bottom: 0;
+  position: absolute;
+  width: 10px;
+  height: 2px;
+  background: #f81f01;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.service-btn a span:hover::after {
+  width: 100%;
+}
 /*# sourceMappingURL=style.css.map */
