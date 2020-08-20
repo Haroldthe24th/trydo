@@ -294,8 +294,8 @@ header {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  padding-top: 7rem;
-  padding-bottom: 7rem;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
 }
 
 .about-content {
@@ -355,6 +355,7 @@ header {
 }
 
 /**************/
+/*SERVICE SECTION*/
 .services-section {
   min-height: 45rem;
   background: #101010;
@@ -380,10 +381,8 @@ header {
 .service-element-srv {
   color: #c6c9d8;
   padding: 2rem;
-  -webkit-transition: 0.6s;
-  transition: 0.6s;
-  -webkit-transition-delay: 0.5s;
-          transition-delay: 0.5s;
+  -webkit-transition: 0.2s ease-out;
+  transition: 0.2s ease-out;
   border-radius: 15px;
   cursor: pointer;
 }
@@ -424,8 +423,8 @@ header {
 }
 
 .service-btn a {
-  font-weight: 1.5rem;
-  color: red;
+  color: white;
+  font-size: 1.1rem;
 }
 
 .service-btn a span {
@@ -435,11 +434,11 @@ header {
 .service-btn a span::after {
   content: "";
   left: 0;
-  bottom: 0;
+  bottom: -5px;
   position: absolute;
-  width: 10px;
+  width: 40px;
   height: 2px;
-  background: #f81f01;
+  background: #f9004d;
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
@@ -447,4 +446,95 @@ header {
 .service-btn a span:hover::after {
   width: 100%;
 }
+
+/*************/
+/*WORKS SECTION*/
+.works-section {
+  min-height: 45rem;
+  background: #191919;
+  color: #fff;
+}
+
+.works-container {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.works-header {
+  text-align: center;
+}
+
+.works-header h1 {
+  font-size: 3.7rem;
+  font-weight: 900;
+  color: #fff;
+}
+
+.works-header p {
+  font-size: 1.1rem;
+  line-height: 1.8rem;
+  opacity: 0.8;
+  padding-top: 1rem;
+  color: #c6c9d8;
+  width: 38rem;
+  display: inline-block;
+}
+
+.slide-item {
+  height: 35rem;
+  width: 25rem;
+  border-radius: 15px;
+  position: relative;
+  z-index: 20;
+}
+
+.slide-item:hover .slide-thumbnail {
+  -webkit-transform: scale(1.08);
+          transform: scale(1.08);
+}
+
+.slide-item:hover::before {
+  opacity: 0.85;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(10%, #f9004d), to(black));
+  background: linear-gradient(to bottom, #f9004d 10%, black 100%);
+  -webkit-transform: scale(1.08);
+          transform: scale(1.08);
+}
+
+.slide-item::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  -webkit-transition: 1s;
+  transition: 1s;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  background: black;
+  z-index: 10;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  border-radius: 15px;
+}
+
+.slide-item-content {
+  position: absolute;
+  bottom: 0;
+  z-index: 15;
+}
+
+.slide-thumbnail {
+  background-image: url("./assets/imgs/portfolio-8.jpg");
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 5;
+  border-radius: 15px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  background-size: cover;
+}
+
+/**************/
 /*# sourceMappingURL=style.css.map */

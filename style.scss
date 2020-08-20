@@ -162,6 +162,11 @@ $coldPink: #ee076e;
   line-height: 1.8rem;
   opacity: 0.8;
 }
+@mixin header-h1 {
+  font-size: 3.7rem;
+  font-weight: 900;
+  color: #fff;
+}
 
 /*****/
 
@@ -261,8 +266,8 @@ header {
 }
 .about-container {
   @include flex-row();
-  padding-top: 7rem;
-  padding-bottom: 7rem;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
 }
 .about-content {
   @include flex-col();
@@ -280,9 +285,7 @@ header {
 
 .main-about {
   h1 {
-    font-size: 3.7rem;
-    font-weight: 900;
-    color: #fff;
+    @include header-h1();
   }
   p {
     @include para();
@@ -303,7 +306,7 @@ header {
   }
 }
 /**************/
-
+/*SERVICE SECTION*/
 .services-section {
   min-height: 45rem;
   background: $bg1;
@@ -323,9 +326,8 @@ header {
 .service-element-srv {
   color: $txtGrey;
   padding: 2rem;
-  transition: 0.6s;
+  transition: 0.2s ease-out;
 
-  transition-delay: 0.5s;
   border-radius: 15px;
   cursor: pointer;
   .content {
@@ -359,20 +361,21 @@ header {
 }
 .service-btn {
   a {
-    font-weight: 1.5rem;
-    color: red;
+    color: white;
+    font-size: 1.1rem;
 
     span {
       position: relative;
+
       &::after {
         content: "";
         left: 0;
-        bottom: 0;
+        bottom: -5px;
 
         position: absolute;
-        width: 10px;
+        width: 40px;
         height: 2px;
-        background: #f81f01;
+        background: $hotPink;
         transition: 0.4s;
       }
       &:hover {
@@ -383,3 +386,75 @@ header {
     }
   }
 }
+/*************/
+
+/*WORKS SECTION*/
+.works-section {
+  min-height: 45rem;
+  background: $bg2;
+  color: #fff;
+}
+.works-container {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+.works-header {
+  text-align: center;
+  h1 {
+    @include header-h1();
+  }
+  p {
+    @include para();
+    padding-top: 1rem;
+    color: $txtGrey;
+    width: 38rem;
+    display: inline-block;
+  }
+}
+.slide-item {
+  height: 35rem;
+  width: 25rem;
+  border-radius: 15px;
+  position: relative;
+  z-index: 20;
+  &:hover {
+    .slide-thumbnail {
+      transform: scale(1.08);
+    }
+    &::before {
+      opacity: 0.85;
+      background: linear-gradient(to bottom, $hotPink 10%, black 100%);
+      transform: scale(1.08);
+    }
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    transition: 1s;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    background: black;
+    z-index: 10;
+    transition: 0.5s;
+    border-radius: 15px;
+  }
+}
+.slide-item-content {
+  position: absolute;
+  bottom: 0;
+  z-index: 15;
+}
+.slide-thumbnail {
+  background-image: url("./assets/imgs/portfolio-8.jpg");
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 5;
+  border-radius: 15px;
+  transition: 0.5s;
+  background-size: cover;
+}
+/**************/
