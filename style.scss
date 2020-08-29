@@ -340,9 +340,9 @@ header {
 .service-element-srv {
   color: $txtGrey;
   padding: 2rem;
-  transition: 0.2s ease-out;
-  transition-delay: 0.2s;
+  transition: all 0.2s ease-out;
   border-radius: 15px;
+  background: transparent;
   cursor: pointer;
   .content {
     h3 {
@@ -404,7 +404,7 @@ header {
 
 /*WORKS SECTION*/
 .works-section {
-  min-height: 45rem;
+  min-height: 65rem;
   background: $bg2;
   color: #fff;
 }
@@ -524,4 +524,66 @@ header {
   @include slider-btn;
   right: 0;
 }
+
+.fun-facts {
+  margin-top: 40rem;
+  padding-bottom: 4rem;
+  h1 {
+    font-size: 2.2rem;
+    font-weight: 900;
+    color: #fff;
+    text-align: center;
+    padding-bottom: 1rem;
+  }
+}
+.fun-facts-content {
+  @include flex-row();
+  h1 {
+    @include header-h1();
+    @include verticalPad(2rem);
+    color: $hotPink;
+  }
+  p {
+    @include para();
+    @include horizontalPad(3rem);
+    color: $txtGrey;
+    text-align: center;
+  }
+}
 /**************/
+/*testimonial-section*/
+.testimonial-section {
+  min-height: 45rem;
+  background: $bg1;
+}
+.testmonial-container {
+  @include verticalPad(6rem);
+  h1 {
+    @include header-h1();
+    font-size: 2.2rem;
+    line-height: 3.5rem;
+    text-align: center;
+    @include horizontalPad(7rem);
+  }
+  p {
+    text-transform: uppercase;
+    @include para();
+    color: $txtGrey;
+    padding-top: 4rem;
+    padding-bottom: 2.5rem;
+    text-align: center;
+    span {
+      color: #fff;
+      opacity: 1;
+    }
+  }
+}
+.testmonial-list {
+  @include flex-row();
+  width: fit-content;
+  margin: auto;
+  li {
+    margin-right: 1rem;
+  }
+}
+/********************/

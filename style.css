@@ -382,11 +382,10 @@ header {
 .service-element-srv {
   color: #c6c9d8;
   padding: 2rem;
-  -webkit-transition: 0.2s ease-out;
-  transition: 0.2s ease-out;
-  -webkit-transition-delay: 0.2s;
-          transition-delay: 0.2s;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
   border-radius: 15px;
+  background: transparent;
   cursor: pointer;
 }
 
@@ -453,7 +452,7 @@ header {
 /*************/
 /*WORKS SECTION*/
 .works-section {
-  min-height: 45rem;
+  min-height: 65rem;
   background: #191919;
   color: #fff;
 }
@@ -621,5 +620,104 @@ header {
   right: 0;
 }
 
+.fun-facts {
+  margin-top: 40rem;
+  padding-bottom: 4rem;
+}
+
+.fun-facts h1 {
+  font-size: 2.2rem;
+  font-weight: 900;
+  color: #fff;
+  text-align: center;
+  padding-bottom: 1rem;
+}
+
+.fun-facts-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.fun-facts-content h1 {
+  font-size: 3.7rem;
+  font-weight: 900;
+  color: #fff;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  color: #f9004d;
+}
+
+.fun-facts-content p {
+  font-size: 1.1rem;
+  line-height: 1.8rem;
+  opacity: 0.8;
+  padding-right: 3rem;
+  padding-left: 3rem;
+  color: #c6c9d8;
+  text-align: center;
+}
+
 /**************/
+/*testimonial-section*/
+.testimonial-section {
+  min-height: 45rem;
+  background: #101010;
+}
+
+.testmonial-container {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+
+.testmonial-container h1 {
+  font-size: 3.7rem;
+  font-weight: 900;
+  color: #fff;
+  font-size: 2.2rem;
+  line-height: 3.5rem;
+  text-align: center;
+  padding-right: 7rem;
+  padding-left: 7rem;
+}
+
+.testmonial-container p {
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  line-height: 1.8rem;
+  opacity: 0.8;
+  color: #c6c9d8;
+  padding-top: 4rem;
+  padding-bottom: 2.5rem;
+  text-align: center;
+}
+
+.testmonial-container p span {
+  color: #fff;
+  opacity: 1;
+}
+
+.testmonial-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: auto;
+}
+
+.testmonial-list li {
+  margin-right: 1rem;
+}
+
+/********************/
 /*# sourceMappingURL=style.css.map */

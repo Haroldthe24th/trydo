@@ -299,7 +299,82 @@
                             <div class="slide-thumbnail"></div>
 
                         </div>
+                        <div class="slide-item">
+                            <div class="slide-item-shadow">
+
+                            </div>
+                            <div class="slide-item-content">
+                                <p>7</p>
+                                <h3>Getting tickets to the big show</h3>
+                                <button class="btn slide-btn">case study</button>
+                            </div>
+                            <div class="slide-thumbnail"></div>
+
+                        </div>
                     </div>
+                </div>
+            </div>
+            <div class="fun-facts">
+                <h1>Our Fun Facts
+                </h1>
+                <div class="fun-facts-content">
+                    <div class="fun-facts-elemnt">
+                        <h1>992+</h1>
+                        <p>The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those.</p>
+                    </div>
+                    <div class="fun-facts-elemnt">
+                        <h1>992+</h1>
+                        <p>The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those.</p>
+                    </div>
+                    <div class="fun-facts-elemnt">
+                        <h1>992+</h1>
+                        <p>The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="testimonial-section">
+        <div class="container">
+            <div class="testmonial-container">
+                <h1>Aklima The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those
+                    interested. Sections Bonorum et Malorum original.</h1>
+                <p><span>
+                        FATIMA ASRAFY </span>- COO, AMERIMAR ENTERPRISES, INC.
+                </p>
+                <div class="testmonial-ppl">
+                    <ol class="testmonial-list">
+                        <li><a href="">
+                                <img src="assets/imgs/testimonial-1.jpg">
+                            </a></li>
+                        <li><a href="">
+                                <img src="assets/imgs/testimonial-1.jpg">
+                            </a></li>
+
+                        <li><a href="">
+                                <img src="assets/imgs/testimonial-1.jpg">
+                            </a></li>
+
+                        <li><a href="">
+                                <img src="assets/imgs/testimonial-1.jpg">
+                            </a></li>
+
+                        <li><a href="">
+                                <img src="assets/imgs/testimonial-1.jpg">
+                            </a></li>
+
+                        <li><a href="">
+                                <img src="assets/imgs/testimonial-1.jpg">
+                            </a></li>
+
+                        <li><a href="">
+                                <img src="assets/imgs/testimonial-1.jpg">
+                            </a></li>
+
+                        <li><a href="">
+                                <img src="assets/imgs/testimonial-1.jpg">
+                            </a></li>
+                    </ol>
                 </div>
             </div>
         </div>
@@ -345,11 +420,14 @@
                 let poped = postArr.pop();
                 postArr.unshift(poped);
             }
-
+            console.log("postArr", postArr)
             sliderChildren.forEach((child, index) => {
                 //swamp indexsssssss
-                child.style.left = postArr[index]
+                if (left && index === 6) {
+                    child.classList.add("fade-in")
+                }
 
+                child.style.left = postArr[index]
             })
 
 
