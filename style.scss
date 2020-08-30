@@ -582,8 +582,41 @@ header {
   @include flex-row();
   width: fit-content;
   margin: auto;
-  li {
-    margin-right: 1rem;
+  width: 33rem;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  .testmonial-item {
+    margin: 0.8rem;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+    width: fit-content;
+    &:hover {
+      transform: scale(1.12);
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 13px;
+      height: 13px;
+      background: $hotPink;
+      border-radius: 50%;
+      top: -5px;
+      right: -5px;
+    }
+    a {
+      display: inline-block;
+
+      img {
+        backface-visibility: hidden;
+        transform: translateZ(0);
+        transform: scale(0.9);
+        width: 5rem;
+        border-radius: 5px;
+      }
+    }
   }
 }
+
 /********************/

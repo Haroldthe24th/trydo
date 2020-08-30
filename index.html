@@ -344,34 +344,34 @@
                 </p>
                 <div class="testmonial-ppl">
                     <ol class="testmonial-list">
-                        <li><a href="">
+                        <li class="testmonial-item"><a href="">
                                 <img src="assets/imgs/testimonial-1.jpg">
                             </a></li>
-                        <li><a href="">
-                                <img src="assets/imgs/testimonial-1.jpg">
-                            </a></li>
-
-                        <li><a href="">
+                        <li class="testmonial-item"><a href="">
                                 <img src="assets/imgs/testimonial-1.jpg">
                             </a></li>
 
-                        <li><a href="">
+                        <li class="testmonial-item"><a href="">
                                 <img src="assets/imgs/testimonial-1.jpg">
                             </a></li>
 
-                        <li><a href="">
+                        <li class="testmonial-item"><a href="">
                                 <img src="assets/imgs/testimonial-1.jpg">
                             </a></li>
 
-                        <li><a href="">
+                        <li class="testmonial-item"><a href="">
                                 <img src="assets/imgs/testimonial-1.jpg">
                             </a></li>
 
-                        <li><a href="">
+                        <li class="testmonial-item"><a href="">
                                 <img src="assets/imgs/testimonial-1.jpg">
                             </a></li>
 
-                        <li><a href="">
+                        <li class="testmonial-item"><a href="">
+                                <img src="assets/imgs/testimonial-1.jpg">
+                            </a></li>
+
+                        <li class="testmonial-item"><a href="">
                                 <img src="assets/imgs/testimonial-1.jpg">
                             </a></li>
                     </ol>
@@ -402,7 +402,7 @@
             }
             return { width: e[a + 'Width'], height: e[a + 'Height'] };
         }
-        const amount = (index) => 500 * index - 265;
+        const amount = (index) => 500 * index - 600;
 
         function move(left = true) {
             let postArr = [];
@@ -423,11 +423,10 @@
             console.log("postArr", postArr)
             sliderChildren.forEach((child, index) => {
                 //swamp indexsssssss
-                if (left && index === 6) {
-                    child.classList.add("fade-in")
-                }
+
 
                 child.style.left = postArr[index]
+
             })
 
 
