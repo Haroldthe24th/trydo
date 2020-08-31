@@ -625,18 +625,27 @@ header {
   min-height: 50rem;
   background-color: $bg2;
 }
+.news-container {
+  @include verticalPad(6rem);
+}
 .news-cards {
   position: relative;
+  height: 34rem;
+  width: 100%;
+
+  @include flex-row();
+  justify-content: space-between;
 }
 .news-item {
-  position: absolute;
+  position: relative;
   height: 34rem;
-  width: 24rem;
-  border-radius: 15px;
+  width: 25rem;
+  border-radius: 4px;
   z-index: 20;
   overflow: hidden;
   // transform-style: preserve-3d;
   transition: 1s;
+  cursor: pointer;
   &:hover {
     .news-thumbnail {
       transform: scale(1.15);
@@ -682,7 +691,7 @@ header {
   height: 100%;
   width: 100%;
   z-index: 5;
-  border-radius: 15px;
+  border-radius: 5px;
   transition: 0.5s;
   background-size: cover;
   background-position: center;
@@ -698,10 +707,11 @@ header {
   p {
     opacity: 0.85;
     color: $txtGrey;
-    font-size: 1.1rem;
+    font-size: 0.9rem;
   }
   h3 {
-    @include verticalPad(2rem);
+    padding-top: 1.3rem;
+    padding-bottom: 2.5rem;
     font-size: 1.5rem;
     font-weight: bold;
     line-height: 2rem;
@@ -711,5 +721,50 @@ header {
   opacity: 0;
   visibility: hidden;
   transition: all 0.1s ease-in-out;
+  font-size: 0.8rem;
+  border-color: $hotPink;
+}
+.news-header {
+  margin-bottom: 3rem;
+  @include flex-row();
+  h1 {
+    @include header-h1();
+  }
+  p {
+    @include para();
+    margin-top: 1.7rem;
+    color: $txtGrey;
+  }
+  .service-btn {
+    float: right;
+  }
+}
+.left-news-header {
+  margin-top: auto;
+
+  width: 50%;
+}
+.right-news-header {
+  width: 50%;
+  margin-top: auto;
+  margin-bottom: 0.55rem;
+}
+.clients-container {
+  margin-top: 5rem;
+}
+.clients-list {
+  @include flex-row();
+  flex-wrap: wrap;
+  justify-content: center;
+  li {
+    padding: 3rem;
+    img {
+      filter: invert(1);
+      opacity: 0.7;
+      max-height: 110px;
+      max-width: 150px;
+      cursor: pointer;
+    }
+  }
 }
 /*************/
