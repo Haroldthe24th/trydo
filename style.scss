@@ -626,7 +626,8 @@ header {
   background-color: $bg2;
 }
 .news-container {
-  @include verticalPad(6rem);
+  padding-top: 6rem;
+  padding-bottom: 3rem;
 }
 .news-cards {
   position: relative;
@@ -779,21 +780,48 @@ header {
 }
 .footer-left {
   background: -webkit-linear-gradient(140deg, $coldPink 0%, $deepOrange 100%);
-  width: 50%;
+  width: 51%;
   height: 35rem;
   position: absolute;
   left: 0;
   bottom: 0;
   border-top-right-radius: 5px;
   @include flex-row();
+  align-items: center;
+  justify-content: flex-start;
+  z-index: 15;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url("./assets/imgs/pattern-1.png");
+    z-index: -1;
+    opacity: 0.5;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    width: 26rem;
+    height: 20rem;
+    background: url("./assets/imgs/big-logo.png") no-repeat;
+    z-index: -1;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+  }
 }
+
 .footer-left-content {
-  margin: auto;
+  margin-left: 8rem;
   h1 {
     @include header-h1();
     font-size: 4.5rem;
     line-height: 90px;
     font-family: "Montserrat", sans-serif;
+    padding-bottom: 2.3rem;
+    padding-top: 0.7rem;
   }
   p {
     text-transform: uppercase;
@@ -802,7 +830,7 @@ header {
 }
 .footer-right {
   background: $bg1;
-  width: 50%;
+  width: 49%;
   height: 30rem;
   position: absolute;
   right: 0;
@@ -818,5 +846,32 @@ header {
     color: $hotPink;
   }
 }
-
+.footer-right-content {
+  color: $txtGrey;
+  opacity: 0.8;
+  h4 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 2.3rem;
+  }
+  li {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+}
+.copyright {
+  color: $txtGrey;
+  opacity: 0.8;
+  margin-bottom: 3rem;
+  position: absolute;
+  bottom: 0;
+  padding-left: 7.3rem;
+}
+.footer-right-content-container {
+  @include flex-row();
+  justify-content: space-between;
+  padding-top: 10rem;
+  padding-right: 8.5rem;
+  padding-left: 7.3rem;
+}
 /********/
