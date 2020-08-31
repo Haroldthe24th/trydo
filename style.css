@@ -769,5 +769,113 @@ header {
   background-color: #191919;
 }
 
+.news-cards {
+  position: relative;
+}
+
+.news-item {
+  position: absolute;
+  height: 34rem;
+  width: 24rem;
+  border-radius: 15px;
+  z-index: 20;
+  overflow: hidden;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.news-item:hover .news-thumbnail {
+  -webkit-transform: scale(1.15);
+          transform: scale(1.15);
+}
+
+.news-item:hover::before {
+  opacity: 0.85;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(10%, #f9004d), to(black));
+  background: linear-gradient(to bottom, #f9004d 10%, black 100%);
+}
+
+.news-item:hover .news-btn {
+  opacity: 1;
+  visibility: visible;
+}
+
+.news-item:hover .news-item-content {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.news-item::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  -webkit-transition: 1s;
+  transition: 1s;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  background: black;
+  z-index: 10;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  border-radius: 5px;
+}
+
+.news-item-shadow {
+  height: 40rem;
+  width: 30rem;
+  background: black;
+  position: absolute;
+  border-radius: 5px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.news-thumbnail {
+  background-image: url("./assets/imgs/portfolio-8.jpg");
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 5;
+  border-radius: 15px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  background-size: cover;
+  background-position: center;
+}
+
+.news-item-content {
+  position: absolute;
+  bottom: 0;
+  -webkit-transform: translateY(100px);
+          transform: translateY(100px);
+  z-index: 15;
+  margin: 3rem;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.news-item-content p {
+  opacity: 0.85;
+  color: #c6c9d8;
+  font-size: 1.1rem;
+}
+
+.news-item-content h3 {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  line-height: 2rem;
+}
+
+.news-btn {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+}
+
 /*************/
 /*# sourceMappingURL=style.css.map */
