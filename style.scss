@@ -768,3 +768,55 @@ header {
   }
 }
 /*************/
+/*FOOOTER*/
+.footer {
+  min-height: 35rem;
+  background: $bg2;
+  position: relative;
+}
+.footer-container {
+  @include flex-row();
+}
+.footer-left {
+  background: -webkit-linear-gradient(140deg, $coldPink 0%, $deepOrange 100%);
+  width: 50%;
+  height: 35rem;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  border-top-right-radius: 5px;
+  @include flex-row();
+}
+.footer-left-content {
+  margin: auto;
+  h1 {
+    @include header-h1();
+    font-size: 4.5rem;
+    line-height: 90px;
+    font-family: "Montserrat", sans-serif;
+  }
+  p {
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+  }
+}
+.footer-right {
+  background: $bg1;
+  width: 50%;
+  height: 30rem;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+.footer-btn {
+  font-size: 1rem;
+  padding: 1.2em 2.3em;
+  letter-spacing: 0.2rem;
+  color: #fff;
+  &:hover {
+    background-color: #fff;
+    color: $hotPink;
+  }
+}
+
+/********/
