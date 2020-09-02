@@ -886,6 +886,22 @@ header {
 
 // Large devices (desktops, 992px and down)
 @media (max-width: 992px) {
+  .first-section-head {
+    font-size: 4rem;
+    width: 25rem;
+    margin-left: 6rem;
+  }
+  .service-elements-container {
+    flex-wrap: wrap;
+    margin-left: 3rem;
+    padding-bottom: 2rem;
+  }
+  .service-element {
+    width: 33%;
+    margin-left: 3rem;
+    margin-bottom: 2rem;
+  }
+
   .about-container {
     flex-direction: column;
   }
@@ -940,13 +956,15 @@ header {
   }
 
   .news-cards {
-    height: auto;
+    height: 55rem;
     flex-wrap: wrap;
     justify-content: "";
   }
   .news-item {
-    width: 24rem;
+    width: 48%;
+    height: 50%;
     margin-top: 2rem;
+    position: relative;
   }
   .footer-container {
     flex-direction: column-reverse;
