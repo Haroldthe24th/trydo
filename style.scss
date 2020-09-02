@@ -107,6 +107,7 @@ section {
 }
 body {
   line-height: 1;
+  overflow-x: hidden;
 }
 a {
   text-decoration: none;
@@ -446,8 +447,8 @@ header {
   width: 30rem;
   border-radius: 15px;
   position: absolute;
-  top: 0;
   z-index: 20;
+  margin-right: 2rem;
   // transform-style: preserve-3d;
   transition: 1s;
   &:hover {
@@ -875,3 +876,95 @@ header {
   padding-left: 7.3rem;
 }
 /********/
+// Small devices (landscape phones, 576px and down)
+@media (max-width: 576px) {
+}
+
+// Medium devices (tablets, 768px and down)
+@media (max-width: 768px) {
+}
+
+// Large devices (desktops, 992px and down)
+@media (max-width: 992px) {
+  .about-container {
+    flex-direction: column;
+  }
+  .about-thumbnail {
+    margin: auto;
+    width: 43rem;
+    img {
+      width: 100%;
+    }
+  }
+  .about-content {
+    margin-top: 3.2rem;
+    @include horizontalPad(4.5rem);
+    padding-right: 7rem;
+  }
+  .about-bottom-content {
+    flex-direction: column;
+  }
+  .small-about {
+    margin-top: 1rem;
+  }
+  .about-container {
+    align-items: center;
+  }
+  .left-service-cont {
+    width: 43rem;
+    margin-bottom: 3rem;
+  }
+  .slide-item-shadow,
+  .slide-item {
+    height: 35rem;
+    width: 25rem;
+  }
+  .testmonial-container {
+    h1 {
+      font-size: 2rem;
+    }
+  }
+  .news-container {
+    margin-left: 5rem;
+    margin-right: 5rem;
+  }
+  .news-header {
+    flex-direction: column;
+  }
+  .left-news-header {
+    width: 100%;
+  }
+  .right-news-header {
+    width: fit-content;
+    margin-top: 1rem;
+  }
+
+  .news-cards {
+    height: auto;
+    flex-wrap: wrap;
+    justify-content: "";
+  }
+  .news-item {
+    width: 24rem;
+    margin-top: 2rem;
+  }
+  .footer-container {
+    flex-direction: column-reverse;
+  }
+  .footer-left,
+  .footer-right {
+    width: 100%;
+    position: relative;
+  }
+  .footer-right {
+    height: 25rem;
+  }
+  .footer-right-content-container {
+    padding-top: 5rem;
+  }
+}
+
+/*// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { 
+
+ }*/

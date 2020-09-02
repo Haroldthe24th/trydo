@@ -108,6 +108,7 @@ section {
 
 body {
   line-height: 1;
+  overflow-x: hidden;
 }
 
 a {
@@ -514,8 +515,8 @@ header {
   width: 30rem;
   border-radius: 15px;
   position: absolute;
-  top: 0;
   z-index: 20;
+  margin-right: 2rem;
   -webkit-transition: 1s;
   transition: 1s;
 }
@@ -1117,4 +1118,104 @@ header {
 }
 
 /********/
+@media (max-width: 992px) {
+  .about-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .about-thumbnail {
+    margin: auto;
+    width: 43rem;
+  }
+  .about-thumbnail img {
+    width: 100%;
+  }
+  .about-content {
+    margin-top: 3.2rem;
+    padding-right: 4.5rem;
+    padding-left: 4.5rem;
+    padding-right: 7rem;
+  }
+  .about-bottom-content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .small-about {
+    margin-top: 1rem;
+  }
+  .about-container {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .left-service-cont {
+    width: 43rem;
+    margin-bottom: 3rem;
+  }
+  .slide-item-shadow,
+  .slide-item {
+    height: 35rem;
+    width: 25rem;
+  }
+  .testmonial-container h1 {
+    font-size: 2rem;
+  }
+  .news-container {
+    margin-left: 5rem;
+    margin-right: 5rem;
+  }
+  .news-header {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .left-news-header {
+    width: 100%;
+  }
+  .right-news-header {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin-top: 1rem;
+  }
+  .news-cards {
+    height: auto;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: "";
+        -ms-flex-pack: "";
+            justify-content: "";
+  }
+  .news-item {
+    width: 24rem;
+    margin-top: 2rem;
+  }
+  .footer-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .footer-left,
+  .footer-right {
+    width: 100%;
+    position: relative;
+  }
+  .footer-right {
+    height: 25rem;
+  }
+  .footer-right-content-container {
+    padding-top: 5rem;
+  }
+}
+
+/*// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { 
+
+ }*/
 /*# sourceMappingURL=style.css.map */
