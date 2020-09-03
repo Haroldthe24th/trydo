@@ -1117,7 +1117,6 @@ header {
   padding-left: 7.3rem;
 }
 
-/********/
 @media (max-width: 992px) {
   .first-section-head {
     font-size: 4rem;
@@ -1232,6 +1231,66 @@ header {
   }
 }
 
+@media (max-width: 768px) {
+  .main-nav {
+    display: none;
+  }
+  .service-elements-container {
+    margin-left: 0rem;
+  }
+  .first-section-head {
+    margin-left: 5rem;
+    padding-left: 0;
+    padding-bottom: 3rem;
+    font-size: 3.5rem;
+  }
+  .service-element .content h3 {
+    font-size: 1.3rem;
+  }
+  .service-element .content p {
+    font-size: 1.05rem;
+  }
+  .about-thumbnail {
+    width: 32rem;
+  }
+  .about-content {
+    padding-left: 3.5rem;
+  }
+  .main-about h1 {
+    font-size: 2rem;
+  }
+  .main-about p {
+    margin-bottom: 1.7rem;
+  }
+  .left-service-cont {
+    width: 31rem;
+    margin-bottom: 0;
+    margin-left: 4rem;
+  }
+  .right-service-cont {
+    margin-top: 2rem;
+    margin-left: 2rem;
+    -ms-grid-columns: 16rem 16rem;
+        grid-template-columns: 16rem 16rem;
+    -ms-grid-rows: 16rem 16rem;
+        grid-template-rows: 16rem 16rem;
+  }
+  .service-element-srv {
+    padding: 0;
+  }
+  .service-element-srv .content h3 {
+    margin-top: 01rem;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  .service-element-srv .content p {
+    color: #fff;
+    opacity: 1;
+  }
+}
+
+/********/
 /*// Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) { 
 
