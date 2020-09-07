@@ -1288,6 +1288,101 @@ header {
     color: #fff;
     opacity: 1;
   }
+  .slide-item-shadow,
+  .slide-item {
+    height: 27rem;
+    width: 17rem;
+  }
+  .slide-item-content {
+    margin: 2rem;
+  }
+  .works-header h1 {
+    font-size: 2rem;
+  }
+  .works-header p {
+    width: 33rem;
+  }
+  .fun-facts {
+    margin-top: 30rem;
+  }
+  .fun-facts h1 {
+    font-size: 2.5rem;
+  }
+  .fun-facts > h1 {
+    font-size: 1.5rem;
+  }
+  .fun-facts-content {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+  .testmonial-container h1 {
+    font-size: 1.2rem;
+    line-height: 2rem;
+    font-weight: 500;
+  }
+  .testmonial-container p {
+    font-size: 1rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+  .testmonial-list .testmonial-item {
+    margin: 0;
+  }
+  .testmonial-list .testmonial-item a img {
+    width: 6rem;
+  }
+  .news-header h1 {
+    font-size: 2rem;
+  }
+  .news-header p {
+    margin-top: 1rem;
+  }
+  .news-cards {
+    height: 47rem;
+  }
+  .clients-list li {
+    padding: 2rem;
+    padding-bottom: 0rem;
+  }
+  .clients-list li img {
+    width: 5rem;
+  }
+  .clients-container {
+    margin-top: 7rem;
+    margin-bottom: 4rem;
+  }
+  .footer-left-content h1 {
+    font-size: 3rem;
+    line-height: 50px;
+  }
+  .footer-left,
+  .footer-right {
+    height: 21rem;
+  }
+  .footer > .container {
+    padding: 0;
+  }
+  .footer-left-content {
+    margin-left: 1.5rem;
+  }
+  .footer-left::after {
+    width: 20rem;
+  }
+  .footer-right-content-container {
+    padding-right: 10rem;
+    padding-left: 2.3rem;
+  }
+  .copyright {
+    padding-left: 2.3rem;
+  }
+  .news-item-content h3 {
+    font-size: 1.2rem;
+  }
+  .news-item-content {
+    margin-left: 2rem;
+  }
 }
 
 /********/
