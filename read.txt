@@ -4,3 +4,9 @@ for practice
 
 sass compile
 sass  style.scss index.css
+
+to do:
+-make navbar responsive
+-scroll to top element added
+-make navbar functional
+

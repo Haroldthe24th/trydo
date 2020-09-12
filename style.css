@@ -1568,6 +1568,18 @@ header {
   }
 }
 
+.totop-btn {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin: 2rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 100%;
+  background-image: url("/assets/imgs/up-arrow.jpg");
+  background-size: contain;
+}
+
 /*// Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) { 
 
