@@ -217,7 +217,17 @@ header {
   }
 }
 
-/*                       */
+.floating-scroll-btn {
+position: fixed;
+right:0;
+bottom:0;
+width:50px;
+height: 50px;
+margin-right: 1.2rem;
+margin-bottom: 3.5rem;
+background-color: #fff;
+z-index: 100;
+}
 .nav-li {
   @include flex-row();
   justify-content: space-between;
@@ -225,6 +235,7 @@ header {
 }
 .nav-item {
   position: relative;
+  cursor: pointer;
   &:hover {
     color: $hotPink;
     .nav-item-dropdown{
@@ -237,7 +248,7 @@ header {
   position: absolute;
   display: none;
   border-radius: 5px;
-  width: max-content;
+  width: 12rem;
   padding: 2rem;
   padding-top: 1rem;
   padding-bottom: 1rem;

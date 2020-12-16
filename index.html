@@ -12,6 +12,10 @@
     <link href="css/flickity.min.css" rel="stylesheet">
     <link href="js/flickity.pkgd.min.js" rel="script">
 </head>
+<!-- Floating Scroll Button -->
+<div class="floating-scroll-btn" id="scroll-btn">
+
+</div>
 <!--HEADER -->
 <header>
     <div class="header-wrapper">
@@ -23,7 +27,7 @@
                         <li class="nav-item-title">Home</li>
                         <div class="nav-item-dropdown">
                             <ul class="nav-item-dropdown-list">
-                               <li> Main Demo</li>
+                                <li> Main Demo</li>
                                 <li>Main Demo Dark</li>
                                 <li>Creative Agency</li>
                                 <li>Creative Agency Landing</li>
@@ -43,10 +47,50 @@
                             </ul>
                         </div>
                     </div>
-                    <li>Services</li>
-                    <li>About</li>
-                    <li>Pages</li>
-                    <li>Blocks</li>
+                    <div class="nav-item">
+                        <li class="nav-item-title">Services</li>
+                        <div class="nav-item-dropdown">
+                            <ul class="nav-item-dropdown-list">
+                                <li> Main Services</li>
+                                <li>Demo Services</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="nav-item">
+                        <li class="nav-item-title">About</li>
+                    </div>
+                    <div class="nav-item">
+                        <li class="nav-item-title">Pages</li>
+                        <div class="nav-item-dropdown">
+                            <ul class="nav-item-dropdown-list">
+                                <li> Main Demo</li>
+                                <li>Main Demo Dark</li>
+                                <li>Creative Agency</li>
+                                <li>Creative Agency Landing</li>
+                                <li>Personal Portfolio</li>
+                                <li>Personal Portfolio 02</li>
+                                <li>Personal Portfolio Landing</li>
+                                <li>Designer Portfolio</li>
+                                <li>Creative Portfolio</li>
+                                <li>Business</li>
+                                <li>Digital Agency</li>
+
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="nav-item">
+                        <li class="nav-item-title">BLocks</li>
+                        <div class="nav-item-dropdown">
+                            <ul class="nav-item-dropdown-list">
+                                <li> Main Demo</li>
+                                <li>Main Demo Dark</li>
+                                <li>Creative Agency</li>
+                                <li>Creative Agency Landing</li>
+                                <li>Personal Portfolio</li>
+                                <li>Personal Portfolio 02</li>
+                            </ul>
+                        </div>
+                    </div>
                     <li>Contact</li>
                 </ul>
             </nav>
@@ -562,6 +606,8 @@
     </div>
     <script src="js/flickity.pkgd.min.js"></script>
     <script>
+        var scrollBtn = document.querySelector("#scroll-btn");
+            scrollBtn.addEventListener("click", ()=> window.scrollTo({left: 0, top:0, behavior: "smooth"}) )
         var flky = new Flickity('.carousel', {
             // options, defaults listed
 
@@ -644,6 +690,7 @@
             // at end of cells, wraps-around to first for infinite scrolling
 
         });
+        
     </script>
 </body>
 
