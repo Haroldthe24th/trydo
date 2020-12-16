@@ -201,6 +201,48 @@ header {
   width: 30rem;
 }
 
+.nav-item {
+  position: relative;
+}
+
+.nav-item:hover {
+  color: #f9004d;
+}
+
+.nav-item:hover .nav-item-dropdown {
+  display: inline-block;
+}
+
+.nav-item-dropdown {
+  color: #000;
+  position: absolute;
+  display: none;
+  border-radius: 5px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  padding: 2rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  background-color: #fff;
+}
+
+.nav-item-title {
+  margin-bottom: 1rem;
+}
+
+.nav-item-dropdown-list li {
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.nav-item-dropdown-list li:hover {
+  color: #f9004d;
+}
+
 .header-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -257,6 +299,7 @@ header {
   font-family: "Montserrat", sans-serif;
   background: -webkit-linear-gradient(140deg, #ee076e 0%, #f81f01 100%);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   font-size: 8rem;
   font-weight: 900;
@@ -1579,9 +1622,4 @@ header {
   background-image: url("/assets/imgs/up-arrow.jpg");
   background-size: contain;
 }
-
-/*// Extra large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) { 
-
- }*/
 /*# sourceMappingURL=style.css.map */

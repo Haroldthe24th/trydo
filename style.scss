@@ -223,6 +223,41 @@ header {
   justify-content: space-between;
   width: 30rem;
 }
+.nav-item {
+  position: relative;
+  &:hover {
+    color: $hotPink;
+    .nav-item-dropdown{
+      display: inline-block;
+    }
+  }
+}
+.nav-item-dropdown{
+  color: #000;
+  position: absolute;
+  display: none;
+  border-radius: 5px;
+  width: max-content;
+  padding: 2rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  background-color: #fff;
+
+}
+.nav-item-title{
+  margin-bottom: 1rem;
+}
+.nav-item-dropdown-list  li{
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  &:hover{
+    color: $hotPink;
+
+  }
+}
 .header-wrapper {
   @include flex-row();
   justify-content: space-between;
@@ -251,6 +286,7 @@ header {
   font-family: "Montserrat", sans-serif;
   background: -webkit-linear-gradient(140deg, $coldPink 0%, $deepOrange 100%);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   font-size: 8rem;
   font-weight: 900;
@@ -1289,11 +1325,6 @@ header {
   width: 2.5rem;
   height: 2.5rem;
   border-radius: 100%;
-
   background-image: url("/assets/imgs/up-arrow.jpg");
   background-size: contain;
 }
-/*// Extra large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) { 
-
- }*/
