@@ -14,7 +14,7 @@
 </head>
 <!-- Floating Scroll Button -->
 <div class="floating-scroll-btn hidden" id="scroll-btn">
-    <img  class="floating-scroll-btn-img" src="assets/imgs/up-arrow.png"  alt="up-arrow-button" srcset=""> 
+    <img class="floating-scroll-btn-img" src="assets/imgs/up-arrow.png" alt="up-arrow-button" srcset="">
 </div>
 <!--HEADER -->
 <header>
@@ -97,6 +97,16 @@
             </nav>
             <a href="#" class="header-btn btn">buy now</a>
 
+            <div class="header-right-hamburger">
+            <a href="#" class="header-btn btn">buy now</a>
+            <svg class="hamburger" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="feather feather-menu">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+    </div>
         </div>
     </div>
 </header>
@@ -605,20 +615,20 @@
 
     <script src="js/flickity.pkgd.min.js"></script>
     <script>
-        
+
         var scrollBtn = document.querySelector("#scroll-btn");
-            scrollBtn.addEventListener("click", ()=> window.scrollTo({left: 0, top:0, behavior: "smooth"}) )
+        scrollBtn.addEventListener("click", () => window.scrollTo({ left: 0, top: 0, behavior: "smooth" }))
 
         var aboutDiv = document.querySelector("#about");
 
-        window.addEventListener("scroll",((e)=>{
+        window.addEventListener("scroll", ((e) => {
             console.log(window.scrollY)
-            if(window.scrollY > 400){
+            if (window.scrollY > 400) {
                 scrollBtn.classList.remove("hidden");
             } else {
                 scrollBtn.classList.add("hidden");
             }
-            
+
         }))
         var flky = new Flickity('.carousel', {
             // options, defaults listed
@@ -702,7 +712,7 @@
             // at end of cells, wraps-around to first for infinite scrolling
 
         });
-        
+
     </script>
 </body>
 
