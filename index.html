@@ -12,6 +12,12 @@
     <link href="css/flickity.min.css" rel="stylesheet">
     <link href="js/flickity.pkgd.min.js" rel="script">
 </head>
+<!-- Hamburger side nav-->
+<section class="side-nav">
+<div  class="side-nav-content">
+
+</div>
+</section>
 <!-- Floating Scroll Button -->
 <div class="floating-scroll-btn hidden" id="scroll-btn">
     <img class="floating-scroll-btn-img" src="assets/imgs/up-arrow.png" alt="up-arrow-button" srcset="">
@@ -98,7 +104,7 @@
             <a href="#" class="header-btn btn">buy now</a>
 
             <div class="header-right-hamburger">
-            <a href="#" class="header-btn btn">buy now</a>
+            <a id="hamburgerOpen"href="#" class="header-btn btn">buy now</a>
             <svg class="hamburger" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none"
             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
             class="feather feather-menu">
@@ -619,6 +625,10 @@
         var scrollBtn = document.querySelector("#scroll-btn");
         scrollBtn.addEventListener("click", () => window.scrollTo({ left: 0, top: 0, behavior: "smooth" }))
 
+        var hamburgerOpenBtn = document.querySelector("#hamburgerOpen");
+        hamburgerOpenBtn.addEventListener("click", ()=> {
+            //set overflow hidden on <html>
+        })
         var aboutDiv = document.querySelector("#about");
 
         window.addEventListener("scroll", ((e) => {
