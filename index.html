@@ -705,11 +705,11 @@
             setTimeout(() => {
                 //time it takes for sidenav to close
                 document.getElementsByTagName("html")[0].style.overflow = "auto";
+                sideNavContent.classList.toggle("hidden");
             }, 600)
 
             //display sidenav
             sideNav.classList.toggle("width-full");
-            sideNavContent.classList.toggle("hidden");
 
         })
         function toggleListNav(e){
