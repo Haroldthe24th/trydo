@@ -187,13 +187,74 @@ header {
 }
 
 .side-nav {
-  background-color: orange;
+  background-color: #101010;
   position: absolute;
   z-index: 101;
   right: 0;
   top: 0;
-  width: 100vw;
+  width: 0;
   height: 100rem;
+  -webkit-transition: 0.6s all ease-in-out;
+  transition: 0.6s all ease-in-out;
+  position: fixed;
+}
+
+.side-nav-list-item {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  cursor: pointer;
+  margin-bottom: 1rem;
+  color: #c6c9d8;
+  font-size: 0.9rem;
+}
+
+.side-nav-list-item a {
+  color: #c6c9d8;
+  font-weight: 600;
+  font-size: 1.01rem;
+}
+
+.side-nav-con {
+  padding: 2rem;
+}
+
+.side-nav-list-item-list {
+  padding-top: 0.9rem;
+  padding-right: 0.8rem;
+  padding-left: 0.8rem;
+}
+
+.side-nav-list-item-list li {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.side-nav-list-item-list li:hover {
+  background-color: rgba(249, 0, 77, 0.07);
+}
+
+.close-side-nav-btn {
+  padding-right: 2rem;
+  cursor: pointer;
+}
+
+.close-side-nav-btn-con {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+.width-full {
+  width: 55vw;
+}
+
+.side-nav-content {
+  margin: 2rem;
+  margin-top: 5rem;
 }
 
 .floating-scroll-btn {
@@ -260,8 +321,8 @@ header {
 }
 
 .nav-item-dropdown-list li {
-  padding-top: .5rem;
-  padding-bottom: .5rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
   font-size: 14px;
   font-weight: 500;
   cursor: pointer;
@@ -324,7 +385,7 @@ header {
 */
 .header-btn {
   margin-bottom: 1rem;
-  font-size: .9rem;
+  font-size: 0.9rem;
   font-weight: 500;
 }
 
@@ -1535,6 +1596,9 @@ header {
 
 /********/
 @media (max-width: 576px) {
+  .width-full {
+    width: 85vw;
+  }
   .main-nav {
     display: none;
   }

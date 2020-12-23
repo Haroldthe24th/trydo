@@ -13,10 +13,72 @@
     <link href="js/flickity.pkgd.min.js" rel="script">
 </head>
 <!-- Hamburger side nav-->
-<section class="side-nav">
-<div  class="side-nav-content">
+<section id="side-nav" class="side-nav">
+    <div id="sideNavContent" class="side-nav-content hidden">
+        <div class="close-side-nav-btn-con">
+            <svg id="closeSideNav" class="close-side-nav-btn" xmlns="http://www.w3.org/2000/svg" width="30" height="30"
+                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" class="feather feather-x">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+        </div>
+        <div>
+            <ul class="side-nav-con">
+                <li class="side-nav-list-item" onclick="toggleListNav(this)">
+                    <a>Home</a>
+                    <ul class="side-nav-list-item-list hidden">
+                        <li> Main Demo</li>
+                        <li>Main Demo Dark</li>
+                        <li>Creative Agency</li>
+                        <li>Creative Agency Landing</li>
+                        <li>Personal Portfolio</li>
+                        <li>Personal Portfolio 02</li>
+                        <li>Personal Portfolio Landing</li>
+                        <li>Designer Portfolio</li>
+                        <li>Creative Portfolio</li>
+                        <li>Business</li>
+                        <li>Digital Agency</li>
+                        <li>Minimal Portfolio</li>
+                        <li>Studio Agency</li>
+                        <li>Home Particles</li>
+                        <li>Startup</li>
+                        <li>Home Paralax</li>
+                        <li>Corporate Business</li>
+                    </ul>
+                </li>
+                <li class="side-nav-list-item" onclick="toggleListNav(this)">
+                    <a>Blocks</a>
+                    <ul class="side-nav-list-item-list hidden">
+                        <li> Main Demo</li>
+                        <li>Main Demo Dark</li>
+                        <li>Creative Agency</li>
+                        <li>Creative Agency Landing</li>
+                        <li>Personal Portfolio</li>
+                        <li>Personal Portfolio 02</li>
+                    </ul>
+                </li>
+                <li class="side-nav-list-item" onclick="toggleListNav(this)">
+                    <a>Pages</a>
+                    <ul class="side-nav-list-item-list hidden">
+                        <li> Main Demo</li>
+                        <li>Main Demo Dark</li>
+                        <li>Creative Agency</li>
+                        <li>Creative Agency Landing</li>
+                        <li>Personal Portfolio</li>
+                        <li>Personal Portfolio 02</li>
+                        <li>Personal Portfolio Landing</li>
+                        <li>Designer Portfolio</li>
+                        <li>Creative Portfolio</li>
+                        <li>Business</li>
+                        <li>Digital Agency</li>
 
-</div>
+                    </ul>
+                </li>
+            </ul>
+
+        </div>
+    </div>
 </section>
 <!-- Floating Scroll Button -->
 <div class="floating-scroll-btn hidden" id="scroll-btn">
@@ -104,15 +166,15 @@
             <a href="#" class="header-btn btn">buy now</a>
 
             <div class="header-right-hamburger">
-            <a id="hamburgerOpen"href="#" class="header-btn btn">buy now</a>
-            <svg class="hamburger" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none"
-            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-            class="feather feather-menu">
-            <line x1="3" y1="12" x2="21" y2="12"></line>
-            <line x1="3" y1="6" x2="21" y2="6"></line>
-            <line x1="3" y1="18" x2="21" y2="18"></line>
-        </svg>
-    </div>
+                <a href="#" class="header-btn btn">buy now</a>
+                <svg id="hamburgerOpen" class="hamburger" xmlns="http://www.w3.org/2000/svg" width="30" height="30"
+                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" class="feather feather-menu">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </div>
         </div>
     </div>
 </header>
@@ -626,9 +688,36 @@
         scrollBtn.addEventListener("click", () => window.scrollTo({ left: 0, top: 0, behavior: "smooth" }))
 
         var hamburgerOpenBtn = document.querySelector("#hamburgerOpen");
-        hamburgerOpenBtn.addEventListener("click", ()=> {
+        var closeSideNavBtn = document.querySelector("#closeSideNav");
+        var sideNav = document.querySelector("#side-nav");
+        var sideNavContent = document.querySelector("#sideNavContent");
+        hamburgerOpenBtn.addEventListener("click", () => {
             //set overflow hidden on <html>
+            document.getElementsByTagName("html")[0].style.overflow = "hidden";
+            //display sidenav
+            sideNav.classList.toggle("width-full");
+            sideNavContent.classList.toggle("hidden");
+
+
         })
+        closeSideNavBtn.addEventListener("click", () => {
+            //set overflow hidden on <html>
+            setTimeout(() => {
+                //time it takes for sidenav to close
+                document.getElementsByTagName("html")[0].style.overflow = "auto";
+            }, 600)
+
+            //display sidenav
+            sideNav.classList.toggle("width-full");
+            sideNavContent.classList.toggle("hidden");
+
+        })
+        function toggleListNav(e){
+            return e.querySelector(".side-nav-list-item-list").classList.toggle("hidden");
+            
+        }
+
+
         var aboutDiv = document.querySelector("#about");
 
         window.addEventListener("scroll", ((e) => {
@@ -640,6 +729,7 @@
             }
 
         }))
+
         var flky = new Flickity('.carousel', {
             // options, defaults listed
 
